@@ -61,11 +61,6 @@ Before you start, ensure you have the following installed on your system:
 
 1. Start the backend server:
    ```bash
-   npm run dev:server
-   ```
-
-2. Start the frontend:
-   ```bash
    npm run dev
    ```
 

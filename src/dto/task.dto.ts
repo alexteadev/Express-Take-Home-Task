@@ -16,7 +16,7 @@ export class CreateTaskDto {
 
 export class UpdateTaskDto {
   @IsOptional()
-  @IsNotEmpty({ message: 'Title is required' })
+  // @IsNotEmpty({ message: 'Title is required' })
   @IsString({ message: 'Title must be a string' })
   title?: string;
 

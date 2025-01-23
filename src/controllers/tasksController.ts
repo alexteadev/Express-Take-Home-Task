@@ -34,10 +34,13 @@ export const updateTask = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { title, color, completed } = req.body;
 
-    if (!title || title.trim() === "") {
-      res.status(400).json({ error: "Title is required" });
-      return;
-    }
+    // I commented this part because editing a task should use only one route. 
+    // When we send a request to change only the status, we don’t send the title, which causes an error. 
+    // In this case, I would suggest adding another route specifically for changing the status. 
+    // if (!title || title.trim() === "") {
+    //   res.status(400).json({ error: "Title is required" });
+    //   return;
+    // }
 
     const updatedTask = await prisma.task.update({
       where: { id: Number(id) },
